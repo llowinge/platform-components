@@ -7,13 +7,13 @@ GitOps manifest for an Internal Developer Platform built on OpenShift
 1. Choose an existing GitHub organization or create a new one for your own fork of Contract-First IDP
 
 2. Fork the following repositories into your organization:
-   - [`platform-components`](https://github.com/contract-first-idp/platform-components) - the platform k8s manifest
-   - [`software-templates`](https://github.com/contract-first-idp/software-templates) - Backstage scaffolder templates
-   - [`developer-charts`](https://github.com/contract-first-idp/developer-charts) - shared default charts for scaffolder templates
-   - [`demo-domain`](https://github.com/contract-first-idp/demo-domain) - root GitOps entrypoint for platform tenants
-   - [`spectral-rules`](https://github.com/contract-first-idp/spectral-rules) - a linter rule set configuration for API specs
+   - [`platform-components`](https://github.com/llowinge/platform-components) - the platform k8s manifest
+   - [`software-templates`](https://github.com/llowinge/software-templates) - Backstage scaffolder templates
+   - [`developer-charts`](https://github.com/llowinge/developer-charts) - shared default charts for scaffolder templates
+   - [`demo-domain`](https://github.com/llowinge/demo-domain) - root GitOps entrypoint for platform tenants
+   - [`spectral-rules`](https://github.com/llowinge/spectral-rules) - a linter rule set configuration for API specs
 
-3. Replace every instance of the string `contract-first-idp` in your `software-templates` fork with your GitHub organization name in your fork and commit that change to the main branch
+3. Replace every instance of the string `llowinge` in your `software-templates` fork with your GitHub organization name in your fork and commit that change to the main branch
 
 4. Replace every instance of the string `apps.cluster-example.com` in your `software-templates` fork with your cluster's application router wildcard domain in your fork and commit that change to the main branch
 
@@ -53,7 +53,7 @@ GitOps manifest for an Internal Developer Platform built on OpenShift
 |-----|-------------|---------------|-------|
 | `clusterRouterDomain` | wildcard domain for the OpenShift Router | `apps.example.cluster.com` |  |
 | `gitHost` | GitHub service provider host | `https://github.com` |  |
-| `gitOrg` | GitHub organization | `contract-first-idp` | e.g. your fork |
+| `gitOrg` | GitHub organization | `llowinge` | e.g. your fork |
 | `gitRef` | Git branch, tag, or commit | `main` | e.g. your feature branch |
 | `gitToken` | Backstage GitHub authentication token | `ghp_REPLACEME` | Settings -> Developer Settings -> Personal Access Tokens |
 | `serviceAccountToken` | Backstage k8s authentication token | `eyREPLACEME` | See [Backstage K8s Integration Docs](https://backstage.io/docs/features/kubernetes/configuration#clustersserviceaccounttoken-optional)
